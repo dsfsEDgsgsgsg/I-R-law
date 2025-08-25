@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>כותרת אתר</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- גופנים וספריות -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css47.css">
+  <style>
+    body {
+      
+  background-color:ghostwhite;
+      margin: 0;
+      font-family: 'Assistant', sans-serif;
+      margin-bottom: 35px;
+      
+    }
+
+    .contact-icons {
+      margin: 0;
+    position: relative;
+    z-index: 1;
+      background-color: #000;
+      margin-top: 80px;
+      color: #D4AF37;
+      
+      padding:  40px 20px;
+      text-align: center;
+      border-top: 1px solid #a2785122;
+      border-bottom: 1px solid #a2785122;
+      
+    }
+
+    .contact-icons h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(162, 120, 81, 0.8);
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background-color: #111;
+      border: 1px solid #a2785155;
+      color: #D4AF37;
+      text-decoration: none;
+      padding: 20px;
+      border-radius: 12px;
+      width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(162, 120, 81, 0.1);
+    }
+
+    .contact-card i {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card:hover {
+      background-color: #1a1a1a;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(162, 120, 81, 0.5);
+    }
+
+    .contact-text {
+      font-size: 16px;
+      direction: rtl;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    
+.background-wrapper {
+
+    position: relative;
+    background-image: url('lawer1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+}
+
+.background-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0,0,0,0.8);
+}
+    .subtitle {
+      font-size: 46px;
+      margin-bottom: 10px;
+      display: inline-block;
+      
+    position: relative;
+    z-index: 1;
+      background-color: #D4AF37;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .headline {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+        opacity: 1; 
+      margin-bottom: 30px;
+      line-height: 1.6;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .contact-description {
+      
+    position: relative;
+    z-index: 1;
+      font-size: 20px;
+      
+      color: #fff;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+      gap: 20px;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .icon-box {
+      background-color: #D4AF37;
+      color: white;
+      padding: 20px;
+      border-radius: 18px;
+      font-size: 26px;
+      min-width: 60px;
+      text-align: center;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .info-text {
+      text-align: right;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .info-title {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 6px;
+      color:#fff;
+    position: relative;
+    z-index: 1;
+    }
+
+    .info-detail {
+      
+    position: relative;
+    z-index: 1;
+      font-size: 20px;
+      
+      color: white;
+    }
+
+    .network-links {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .network-links i {
+      background-color: #1d1f25;
+      color: white;
+      border-radius: 50%;
+      padding: 16px;
+      font-size: 24px;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    .network-links i:hover {
+      background-color: #D4AF37;
+    }
+
+    .items1 {
+      padding: 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      
+    position: relative;
+    z-index: 1;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* רספונסיביות למסכים קטנים */
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 32px;
+      }
+
+      .subtitle {
+        font-size: 28px;
+        padding: 10px 20px;
+      }
+
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-description {
+        font-size: 18px;
+      }
+
+      .contact-card {
+        width: 100vw;
+        max-width: 240px;
+      }
+
+      .contact-methods {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .solve2{
+      background-color:#000 ;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="top-section">
+
+<header>
+  <!-- כפתור המבורגר -->
+  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="logo">
+    איליה רפאילוב - משרד עורכי דין
+    <span>Ilya rfailov law office</span>
+  </div>
+
+
+      <div class="icon-group">
+        <a
+          href="https://wa.me/972548095775"
+          target="_blank"
+          style="font-size: 40px; color: #c8a75c"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a
+          href="tel:972548095775"
+          style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c"
+          ><i class="fas fa-phone"></i
+        ></a>
+      </div>
+</header>
+
+<!-- תפריט עליון אופקי -->
+<nav class="top-nav">
+  
+  <ul>
+    <li><a href="index.html">דף הבית</a></li>
+    <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
+  </ul>
+</nav>
+
+<!-- תפריט צד -->
+<div class="sidebar" id="sidebar" style="display: none;">
+  <a href="index.html">דף הבית</a>
+  <a href="about.html">תוצאות</a>
+  <a href="services.html">תחומי עיסוק</a>
+  <a href="contact.html">צור קשר</a>
+</div>
+
+
+
+</div>
+
+<section class="page-hero">
+  <div class="circle-shape"></div>
+  <div class="small-circle one"></div>
+  <div class="small-circle two"></div>
+  <div class="small-circle three"></div>
+  <div class="background-shape"></div>
+  <div class="wave-shape"></div>
+
+  <h1>צור קשר</h1>
+</section>
+
+    <div class="background-wrapper">
+<div class="contact-container">
+  <p class="subtitle">צרו קשר איתנו</p>
+  <p class="headline">השאירו פרטים ונחזור<br>אליכם בהקדם האפשרי.</p>
+  
+  <p class="contact-description">
+    אנחנו זמינים עבורכם לכל שאלה או התייעצות. ניתן לפנות אלינו בטלפון, מייל או בהודעת וואטסאפ – נשמח לעזור בכל נושא משפטי!
+  </p>
+<div class="items1">
+  <div class="info-row fade-in">
+    <i class="fas fa-map-marker-alt icon-box"></i>
+    <div class="info-text">
+      <div class="info-title">כתובת:</div>
+      <div class="info-detail">ברץ 2, פתח תקווה</div>
+    </div>
+  </div>
+
+  <div class="info-row fade-in">
+    <i class="fas fa-envelope icon-box"></i>
+    <div class="info-text">
+      <div class="info-title">דוא"ל:</div>
+      <div class="info-detail">arielkand@gmail.com</div>
+    </div>
+  </div>
+
+  <div class="info-row fade-in">
+    <i class="fas fa-phone icon-box"></i>
+    <div class="info-text">
+      <div class="info-title">טלפון:</div>
+      <div class="info-detail">054-8095775</div>
+    </div>
+  </div>
+  </div>
+
+ <div class="network-links fade-in">
+  <a href="https://wa.me/972548095775" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/profile.php?id=61557143331663&sk=about" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="tel:972548095775"><i class="fas fa-phone"></i></a>
+</div>
+</div>
+
+<div class="solve2">
+<section class="contact-icons">
+  <h2>צור קשר</h2>
+  <div class="contact-methods">
+    <a href="https://wa.me/972548095775" target="_blank" class="contact-card">
+      <i class="fab fa-whatsapp"></i>
+      <div class="contact-text">054-8095775</div>
+    </a>
+    <a href="tel:0548095775" class="contact-card">
+      <i class="fas fa-phone"></i>
+      <div class="contact-text">התקשר עכשיו</div>
+    </a>
+	  <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/arielkand%40gmail.com" class="contact-card">
+  <i class="fas fa-envelope"></i>
+   <div class="contact-text">arielkand@gmail.com</div>
+</a>
+
+    <a href="https://maps.app.goo.gl/vyR3hD7JsBtpUpJn7" target="_blank" class="contact-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="contact-text">ברץ 2, פתח תקווה</div>
+    </a>
+  </div>
+</section>
+</div>
+
+
+
+
+  <div class="footer">
+    <a
+      class="whatsapp"
+      href="https://wa.me/972524855911"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span>צור קשר בוואטסאפ</span>
+    </a>
+    <a
+      class="facebook"
+      href="https://www.facebook.com/profile.php?id=61557143331663&sk=about"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-facebook-f"></i>
+      <span>עקוב אחרינו בפייסבוק</span>
+    </a>
+  </div>
+<!-- שאר הקוד שלך נשאר זהה (header, nav, וכו') -->
+<!-- המשך בדיוק כמו שהבאת אותו קודם, החל מה-top-section ועד הסקריפטים -->
+
+<script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+
+    if (!sidebar.classList.contains("active")) {
+      sidebar.style.display = "block";
+      setTimeout(() => {
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
+      }, 10);
+    } else {
+      sidebar.classList.remove("active");
+      menuIcon.classList.remove("active");
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
+    }
+  }
+</script>
+<script src="nagishli_beta.js"></script>
+</body>
+</html>

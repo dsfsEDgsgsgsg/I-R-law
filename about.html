@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bangers&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <title>כותרת אתר</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css47.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* גלריה - 3 בשורה */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  gap: 20px; /* ריווח בין תמונות */
+border-radius: 12px;
+padding: 20px;
+
+}
+
+.clickable-image {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-image:hover {
+  filter: brightness(0.7); /* מחשיך את התמונה */
+  cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.3s ease;
+  object-fit: contain;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #c8a75c;
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+  .clickable-image {
+    width: 45%; /* שתי תמונות בשורה */
+  }
+}
+
+@media (max-width: 480px) {
+  .clickable-image {
+    width: 90%; /* תמונה אחת בשורה במסכים קטנים מאוד */
+  }
+
+  .close {
+    font-size: 32px;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+
+.clickable-image {
+  border: 2px solid black; /* רק מסגרת שחורה */
+  border-radius: 7px;
+}
+
+  </style>
+</head>
+<body>
+  
+<div class="top-section">
+
+<header>
+  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="logo">
+    איליה רפאילוב - משרד עורכי דין
+    <span>Ilya rfailov law office</span>
+  </div>
+
+      <div class="icon-group">
+        <a
+          href="https://wa.me/972548095775"
+          target="_blank"
+          style="font-size: 40px; color: #c8a75c"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a
+          href="tel:972548095775"
+          style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c"
+          ><i class="fas fa-phone"></i
+        ></a>
+      </div>
+</header>
+
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">דף הבית</a></li>
+    <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
+  </ul>
+</nav>
+
+<!-- תפריט צד -->
+<div class="sidebar" id="sidebar" style="display: none;">
+  <a href="index.html">דף הבית</a>
+  <a href="about.html">תוצאות</a>
+  <a href="services.html">תחומי עיסוק</a>
+  <a href="contact.html">צור קשר</a>
+</div>
+</div>
+
+<section class="page-hero">
+  <div class="circle-shape"></div>
+  <div class="small-circle one"></div>
+  <div class="small-circle two"></div>
+  <div class="small-circle three"></div>
+  <div class="background-shape"></div>
+  <div class="wave-shape"></div>
+
+  <h1>תוצאות במשרדנו</h1>
+</section>
+<div class="image-gallery">
+  <img src="result1.png" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result2.png" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result3.png" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result4.png" alt="תמונה 4" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result5.png" alt="תמונה 5" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result6.png" alt="תמונה 6" class="clickable-image" onclick="openLightbox(this.src)">
+</div>
+
+
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
+  <div class="footer">
+    <a
+      class="whatsapp"
+      href="https://wa.me/972548095775"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span>צור קשר בוואטסאפ</span>
+    </a>
+    <a
+      class="facebook"
+      href="https://www.facebook.com/profile.php?id=61557143331663&sk=about"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-facebook-f"></i>
+      <span>עקוב אחרינו בפייסבוק</span>
+    </a>
+  </div>
+  
+ <section class="section-kesher">
+    <h2 class="kesher-title">צרו איתנו קשר</h2>
+    <div class="kesher-items">
+      
+      <!-- טלפון -->
+      <div class="kesher-box">
+        <img src="https://img.icons8.com/ios-filled/50/d4b073/phone.png" class="kesher-icon" alt="טלפון">
+        <h3 class="kesher-label">טלפון</h3>
+        <p class="kesher-value"><a href="https://wa.me/972524855911">054-8095775</a></p>
+      </div>
+
+      <!-- אימייל -->
+      <div class="kesher-box">
+        <img src="https://img.icons8.com/ios-filled/50/d4b073/new-post.png" class="kesher-icon" alt="אימייל">
+        <h3 class="kesher-label">דואר אלקטרוני</h3>
+        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/arielkand%40gmail.com">arielkand@gmail.com</a></p>
+      </div>
+
+      <!-- כתובת -->
+      <div class="kesher-box">
+        <img src="https://img.icons8.com/ios-filled/50/d4b073/marker.png" class="kesher-icon" alt="כתובת">
+        <h3 class="kesher-label">כתובת</h3>
+        <p class="kesher-value">
+          <a href="https://maps.app.goo.gl/vyR3hD7JsBtpUpJn7" target="_blank" rel="noopener">
+            ברץ 2, פתח תקווה
+          </a>
+        </p>
+      </div>
+
+    </div>
+    
+    <div>
+      <img class="newlogo" src="newlogo1.jpg">
+      </div>
+      <div class="footer-wrapper">
+  <div class="site-footer">
+    © 2025 אוריאל צולפייב - כל הזכויות שמורות | נבנה בעזרת HTML, CSS ו-JavaScript
+  </div>
+</div>
+
+
+  <script>
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  document.getElementById("lightbox-img").src = src;
+  lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("active");
+}
+</script>
+
+
+
+<script>
+function toggleMenu() {
+  const sidebar = document.getElementById("sidebar");
+  const menuIcon = document.getElementById("menuIcon");
+
+  if (!sidebar.classList.contains("active")) {
+    sidebar.style.display = "block";
+    setTimeout(() => {
+      sidebar.classList.add("active");
+      menuIcon.classList.add("active");
+    }, 10);
+  } else {
+    sidebar.classList.remove("active");
+    menuIcon.classList.remove("active");
+    setTimeout(() => {
+      sidebar.style.display = "none";
+    }, 300);
+  }
+  console.log("toggleMenu function executed."); // New log
+}
+
+window.toggleMenu = toggleMenu; // Make it globally accessible
+
+</script>
+  
+
+<script src="nagishli_beta.js"></script>
+</body>
+</html>
