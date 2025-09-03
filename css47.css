@@ -781,3 +781,9 @@ header {
   }
 
 }
+.big-word {
+  font-size: 76px;
+  font-weight: 400;
+  font-family: "Assistant", sans-serif;
+  text-align: center;
+}
